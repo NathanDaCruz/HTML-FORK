@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              input: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+            },
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Dev Community</title>
+  </head>
+  <body>
+    <section class="grid grid-cols-1 lg:grid-cols-[600px_1fr]">
+      <div
+        class="pt-[98px] px-4 sm:max-w-[500px] w-full lg:px-16 justify-self-center"
+      >
+        <h1 class="text-2xl font-normal mb-24">Sing-in</h1>
+        <div class="flex flex-col gap-y-8 mb-16">
+          <input
+            class="rounded-[20px] border-none shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] h-11 px-8 placeholder:text-[#645A5A] text-base"
+            placeholder="e-mail address"
+            id="emailValue"
+          />
+          <input
+            class="rounded-[20px] border-none shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] h-11 px-8 placeholder:text-[#645A5A] text-base"
+            placeholder="password"
+            id="passwordValue"
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            type="button"
+            id="submitButtonValue"
+            class="text-white rounded-3xl bg-[#4298E8] h-11 hover:brightness-90 transition-colors duration-300 inline-flex items-center justify-center px-8"
+          >
+            Sing-in
+          </button>
+          <a href="/Singup.html">Register</a>
+        </div>
+      </div>
+      <div
+        class="w-full h-screen bg-[#4298E8] lg:flex items-center justify-center hidden"
+      >
+        <img src="img/imgLogin.svg" alt="imagem-login" />
+      </div>
+    </section>
+    <script src="./sining.js" defer></script>
+  </body>
+</html>
